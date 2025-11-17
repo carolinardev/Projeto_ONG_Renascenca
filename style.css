@@ -1,323 +1,84 @@
-/* styles.css — layout simples, responsivo e acessível */
-
-/* Reset básico */
-* {
-    box-sizing:content-box;
-    margin: 10;
-    padding: 0;
-}
-
-html,
-body {
-    height: 100%;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    color: #222;
-    line-height: 1.4;
-    background: rgb(240, 204, 240)ce3;
-}
-
 :root {
-    --primary: rgb(161, 104, 144);
-    --accent: rgb(rgb(248, 182, 188));
-    --muted: rgb(216, 88, 165);
-    --max-width: 1100px;
-    --gap: 1rem;
+    --lilas-claro: #f7f3fc;
+    --lilas-medio: #d8c7ff;
+    --lilas-forte: #6c4ab6;
+    --roxo-escuro: #2a1a3d;
+    --roxo-profund: #1b1028;
+
+    --texto-escuro: #4a3b69;
+    --texto-claro: #f0eaff;
+
+    --card-bg: #ffffff;
 }
 
-/* containers */
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 1.25rem;
-}
-
-/* Header */
-.site-header {
-    border-bottom: 1px solid rgb(212, 37, 125)51, 127);
-    background: white;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.brand {
-    text-decoration: none;
-    color: var(--primary);
-    display: flex;
-    flex-direction: column;
-}
-
-.brand strong {
-    font-size: 1.25rem;
-}
-
-.brand .slogan {
-    font-size: 0.8rem;
-    color: var(--muted);
-}
-
-/* nav */
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: var(--muted);
-    padding: 0.5rem 0.5rem;
-    border-radius: 4px;
-}
-
-.main-nav a:hover,
-.main-nav a:focus {
-    color: var(--primary);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(107, 43, 127, 0.08);
-}
-
-.cta {
-    background: var(--primary);
-    color: white;
-    padding: 0.4rem 0.6rem;
-}
-
-/* mobile */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-}
-
-/* hero */
-.hero {
-    background: linear-gradient(180deg, rgba(107, 43, 127, 0.06), transparent 60%);
-    padding: 2.5rem 0;
-}
-
-.hero-inner {
-    text-align: left;
-}
-
-.hero h1 {
-    color: var(--primary);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.hero p {
-    color: var(--muted);
-    margin-bottom: 1rem;
-}
-
-.actions {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.6rem 0.9rem;
-    border-radius: 6px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    background: transparent;
-    color: var(--primary);
-    cursor: pointer;
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: #fff;
-}
-
-.btn-outline {
-    border: 1px solid var(--primary);
-    color: var(--primary);
-}
-
-/* sections */
-h2 {
-    color: var(--primary);
-    margin: 1rem 0;
-}
-
-.about p,
-.mission p,
-.vision p,
-.values ul,
-.team p {
-    margin-bottom: 1rem;
-    color: var(--muted);
-}
-
-/* grid */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.card {
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-    background: #fff;
-    border: 1px solid #f0f0f0;
-}
-
-/* forms */
-form {
-    margin-top: 1rem;
-}
-
-.form-row {
-    margin-bottom: 0.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-}
-
-label {
-    font-size: 0.95rem;
-    color: #333;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    padding: 0.6rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 0.95rem;
-}
-
-.small-form input,
-.small-form textarea {
-    width: 100%;
-}
-
-/* footer */
-.site-footer {
-    border-top: 1px solid #eee;
-    margin-top: 2rem;
-    padding: 1rem 0;
-    background: #fafafa;
-}
-
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    align-items: center;
-}
-
-/* modal */
-.modal {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.35);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .2s, visibility .2s;
-}
-
-.modal[aria-hidden="false"] {
-    visibility: visible;
-    opacity: 1;
-}
-
-.modal-content {
-    background: white;
-    padding: 1.25rem;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 480px;
-    position: relative;
-}
-
-.modal-close {
-    position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
-    border: none;
-    background: none;
-    font-size: 1.25rem;
-    cursor: pointer;
-}
-
-/* accessibility */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
+/* ================================
+   ESTILOS GERAIS
+================================ */
+body {
+    margin: 0;
     padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    background: var(--lilas-claro);
+    color: var(--texto-escuro);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    transition: background 0.4s, color 0.4s;
 }
 
-/* responsive */
-@media (max-width: 800px) {
-    .main-nav {
-        position: absolute;
-        right: 0.75rem;
-        top: 64px;
-        background: white;
-        border: 1px solid #eee;
-        padding: 0.75rem;
-        border-radius: 8px;
-        display: none;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .main-nav[aria-hidden="false"],
-    .main-nav.show {
-        display: block;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-    body {
-    background: #ffffff;
-    color: #000000;
-    transition: 0.3s;
+img {
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
 }
 
-/* Quando o modo escuro estiver ativo */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ================================
+   MODO ESCURO
+================================ */
 .dark-mode {
-    background: #121212;
-    color: #ffffff;
+    background-color: var(--roxo-profund);
+    color: var(--texto-claro);
 }
 
-/* botão opcional */
-#toggle-dark {
-    padding: 10px 20px;
-    background: #6c4ab6;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+.dark-mode .card {
+    background: #2e1c44;
+    color: var(--texto-claro);
+    border-color: #7452b5;
 }
+
+.dark-mode header,
+.dark-mode footer {
+    background: var(--roxo-escuro);
+}
+
+.dark-mode a {
+    color: #cbb7ff;
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+    padding: 10px 0;
+    background: white;
+    border-bottom: 2px solid var(--lilas-medio);
+}
+
+header .brand {
+    font-size: 26px;
+    text-decoration: none;
+    color: var(--lilas-forte);
+    font-weight: bold;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+    list-style:
 
 #toggle-dark:hover {
     background: #57389a;
