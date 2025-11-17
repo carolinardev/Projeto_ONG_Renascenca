@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <body>
+         <a href="index.html" class="brand"><strong>← Voltar</strong></a>
+    <button id="modo-escuro-btn">🌙 Ativar Modo Escuro</button>
+</body>
+<section id="doacao" class="donation">
+    <h2>Doações</h2>
+    <p>Contribuições ajudam a manter atendimentos e ações.</p>
+
+    <form id="donation-form" class="donation-form" novalidate>
+        <div>
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" required />
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+        </div>
+
+        <fieldset>
+            <legend>Valor</legend>
+            <label><input type="radio" name="amount" value="50" /> R$50</label>
+            <label><input type="radio" name="amount" value="100" /> R$100</label>
+            <label><input type="radio" name="amount" value="200" /> R$200</label>
+            <label>
+                <input id="amount-custom" name="amount-custom" type="number" min="1" placeholder="Outro valor (R$)" />
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Forma de doação</legend>
+            <label><input type="radio" name="method" value="dinheiro" checked /> Dinheiro</label>
+            <label><input type="radio" name="method" value="pix" /> PIX</label>
+            <label><input type="radio" name="method" value="transferencia" /> Transferência</label>
+        </fieldset>
+
+        <div id="method-dinheiro" class="method-info">
+            <p>Doação em dinheiro: entregue em mãos nas nossas instalações ou em eventos. Comprovante será fornecido
+                mediante pedido.</p>
+        </div>
+
+        <div id="method-pix" class="method-info" style="display:none;" aria-hidden="true">
+            <p>PIX:</p>
+            <div>
+                <label for="pix-key">Chave PIX</label>
+                <input id="pix-key" type="text" readonly value="seu-pix@exemplo.com" />
+                <button type="button" id="copy-pix">Copiar chave PIX</button>
+            </div>
+            <div id="pix-copy-status" aria-live="polite"></div>
+        </div>
+
+        <div id="method-transferencia" class="method-info" style="display:none;" aria-hidden="true">
+            <p>Transferência bancária:</p>
+            <div>
+                <label for="bank-name">Banco</label>
+                <input id="bank-name" type="text" readonly value="Banco Exemplo" />
+            </div>
+            <div>
+                <label for="bank-agency">Agência</label>
+                <input id="bank-agency" type="text" readonly value="0001" />
+            </div>
+            <div>
+                <label for="bank-account">Conta</label>
+                <input id="bank-account" type="text" readonly value="12345-6" />
+            </div>
+            <div>
+                <label for="bank-holder">Titular</label>
+                <input id="bank-holder" type="text" readonly value="ONG Renascença" />
+            </div>
+            <div id="transfer-note">Inclua o nome do doador na descrição para facilitar o reconhecimento.</div>
+        </div>
+
+        <div>
+            <label><input id="recurring" name="recurring" type="checkbox" /> Doação recorrente</label>
+        </div>
+
+        <div class="donate-actions">
+            <button type="submit" class="btn btn-primary">Doar</button>
+            <a href="depoimentos-e-projetos.html" class="link">Como a doação é usada?</a>
+        </div>
+
+        <div id="donation-result" role="status" aria-live="polite"></div>
+    </form>

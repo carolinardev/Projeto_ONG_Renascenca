@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fale conosco — Renascença</title>
+    <meta name="description" content="Formulário de contato — ONG Renascença." />
+</head>
+
+<body>
+    <button id="modo-escuro-btn">🌙 Ativar Modo Escuro</button>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand"><strong>← Voltar</strong></a>
+        </div>
+    </header>
+
+    <section id="acolhimento" class="contact-section">
+        <h2>Precisa de acolhimento?</h2>
+        <p>Se você está em situação de violência ou corre risco, preencha o formulário abaixo. Nossa equipe entrará
+            em contato com prioridade e sigilo.</p>
+
+        <form id="contactForm" novalidate>
+            <div class="form-row">
+                <label for="name">Nome (ou 'Anônima')</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required />
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Telefone (ou WhatsApp) com DDD</label>
+                <input type="tel" id="phone" name="phone" placeholder="(xx) xxxxx-xxxx" required />
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" />
+            </div>
+
+            <div class="form-row">
+                <label for="message">Relato / Solicitação</label>
+                <textarea id="message" name="message" rows="5" placeholder="Escreva brevemente sobre sua situação"
+                    required></textarea>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary">Enviar pedido de acolhimento</button>
+            </div>
+        </form>
+    </section>
