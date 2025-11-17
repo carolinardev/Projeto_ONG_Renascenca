@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
     <link rel="stylesheet" href="style.css">
-    <a href="index.html" class="brand"><strong>← Voltar</strong></a>
 </head>
 
 <body>
 
+    <!-- Botão de Modo Escuro -->
     <button id="modo-escuro-btn">🌙 Ativar Modo Escuro</button>
 
-    <form id="cadastroForm">
+    <!-- Formulário de Cadastro -->
+    <form id="form-inscricao">
         <h2>Formulário de Cadastro</h2>
 
         <fieldset>
@@ -65,14 +66,17 @@
         </fieldset>
 
         <button type="submit">Cadastrar</button>
+
+        <!-- Mensagem de Sucesso -->
+        <p id="mensagem-sucesso" class="msg-sucesso">Inscrição concluída com sucesso! 💜</p>
     </form>
 
-    <div id="mensagem-sucesso">✅ Cadastro realizado com sucesso!</div>
-
+    <!-- Link de retorno -->
     <div style="text-align:center; margin-top:20px;">
         <a href="index.html" class="botao">Voltar à Página Inicial</a>
     </div>
 
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 
