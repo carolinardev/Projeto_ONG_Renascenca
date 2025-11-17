@@ -297,4 +297,30 @@ textarea {
     .menu-toggle {
         display: block;
     }
+    body {
+    background: #ffffff;
+    color: #000000;
+    transition: 0.3s;
 }
+
+/* Quando o modo escuro estiver ativo */
+.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+/* botão opcional */
+#toggle-dark {
+    padding: 10px 20px;
+    background: #6c4ab6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#toggle-dark:hover {
+    background: #57389a;
+}
+
+    
